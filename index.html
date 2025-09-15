@@ -1,36 +1,156 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TikTok Style Web</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eki Zulfar Rachman - Portfolio</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
-  <main class="player-page">
-    <video id="mainVideo" class="video" src="132d3f4c6f032f61391a341557a6778b.mp4" playsinline autoplay muted loop></video>
 
-    <!-- Panel kanan -->
-    <div class="right-panel">
-      <div class="profile">
-        <img class="avatar" src="avatar.jpg" alt="avatar" />
-        <button class="follow-btn">Follow</button>
-      </div>
-      <div class="actions">
-        <button class="action like"><span>❤</span><span class="count">1.2K</span></button>
-        <button class="action comment"><span>💬</span><span class="count">256</span></button>
-        <button class="action share"><span>↗</span><span class="count">48</span></button>
-      </div>
-    </div>
+    <header class="container">
+        <nav class="navbar">
+            <a href="#" class="logo">Ekizr</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Panel bawah -->
-    <div class="bottom-panel">
-      <div class="user">@username</div>
-      <div class="caption">Contoh caption untuk video ini.</div>
-      <div class="music">🎵 Original sound - Artist</div>
-    </div>
-  </main>
+    <main>
 
-  <script src="script.js"></script>
+        <section id="home" class="hero container">
+            <div class="hero-text">
+                <div class="status-badge">
+                    <span class="dot"></span>
+                    Ready to innovate
+                </div>
+                <h1>Frontend <br><span>Developer</span></h1>
+                <div class="subtitle">Network & Telecom Student</div>
+                <p>Menciptakan Website Yang Inovatif, Fungsional, dan User-Friendly untuk Solusi Digital.</p>
+                <div class="action-buttons">
+                    <a href="#portfolio" class="btn btn-primary">Projects <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="url(#grad1)" d="M49.8,-57.8C62.7,-48.3,70.2,-31.8,72.7,-14.8C75.2,2.3,72.7,19.9,64,34.1C55.3,48.3,40.4,59.1,24.9,65.8C9.4,72.5,-6.8,75.1,-21.9,70.9C-37,66.7,-51,55.8,-60.8,42.4C-70.6,29,-76.2,13.2,-74.6,-1.7C-73.1,-16.5,-64.4,-30.4,-52.8,-40.4C-41.2,-50.3,-26.8,-56.3,-12,-60.2C2.8,-64.1,17.8,-66.3,29.9,-65.4C42,-64.4,51.1,-62.3,49.8,-57.8Z" transform="translate(100 100)" />
+                </svg>
+            </div>
+        </section>
+
+        <section id="about" class="about-section container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>❖ Transforming ideas into digital experiences ❖</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hello, I'm</h3>
+                    <h1>Eki Zulfar Rachman</h1>
+                    <p>Seorang siswa Teknik Jaringan Komputer dan Telekomunikasi yang tertarik dalam pengembangan Front-End. Saya berfokus pada menciptakan pengalaman digital yang menarik dan selalu berusaha memberikan solusi terbaik dalam setiap proyek.</p>
+                    <div class="about-buttons">
+                        <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> Download CV</a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-picture-container">
+                        <div class="profile-picture"><i class="fas fa-user"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section container">
+            <div class="section-title">
+                <h1>Portfolio Showcase</h1>
+                <p>Jelajahi perjalanan saya melalui proyek, sertifikasi, dan keahlian teknis.</p>
+            </div>
+            <div class="filter-tabs">
+                <button class="tab-btn active" onclick="filterPortfolio('projects')"><i class="fas fa-code"></i> Projects</button>
+                <button class="tab-btn" onclick="filterPortfolio('certificates')"><i class="fas fa-certificate"></i> Certificates</button>
+                <button class="tab-btn" onclick="filterPortfolio('tech')"><i class="fas fa-layer-group"></i> Tech Stack</button>
+            </div>
+            <div class="portfolio-content-wrapper">
+                <div class="portfolio-item show" data-category="projects">
+                    <div class="content-grid">
+                        <div class="card">
+                            <div class="card-image-container"><img src="https://via.placeholder.com/400x225/1A1A3D/FFFFFF?text=AutoChat-Discord" alt="AutoChat-Discord"></div>
+                            <div class="card-content">
+                                <h3>AutoChat-Discord</h3>
+                                <p>Solusi otomatisasi untuk mengirim pesan terjadwal ke saluran Discord.</p>
+                                <div class="card-footer"><a href="#">Details <i class="fas fa-arrow-right fa-sm"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                             <div class="card-image-container"><img src="https://via.placeholder.com/400x225/1A1A3D/FFFFFF?text=Buku+Catatan" alt="Buku Catatan"></div>
+                            <div class="card-content">
+                                <h3>Buku Catatan</h3>
+                                <p>Website untuk membuat, menyimpan, dan mengelola catatan personal.</p>
+                                <div class="card-footer"><a href="#">Details <i class="fas fa-arrow-right fa-sm"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="certificates">
+                    <div class="content-grid">
+                        <div class="certificate-card"><img src="https://via.placeholder.com/400x280/FFFFFF/000000?text=Sertifikat+1" alt="Sertifikat 1"></div>
+                        <div class="certificate-card"><img src="https://via.placeholder.com/400x280/FFFFFF/000000?text=Sertifikat+2" alt="Sertifikat 2"></div>
+                        <div class="certificate-card"><img src="https://via.placeholder.com/400x280/FFFFFF/000000?text=Sertifikat+3" alt="Sertifikat 3"></div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="tech">
+                    <div class="tech-stack-grid">
+                        <div class="tech-card"><i class="devicon-html5-plain colored"></i><p>HTML</p></div>
+                        <div class="tech-card"><i class="devicon-css3-plain colored"></i><p>CSS</p></div>
+                        <div class="tech-card"><i class="devicon-javascript-plain colored"></i><p>Javascript</p></div>
+                        <div class="tech-card"><i class="devicon-react-original colored"></i><p>React.js</p></div>
+                        <div class="tech-card"><i class="devicon-tailwindcss-plain colored"></i><p>Tailwind CSS</p></div>
+                        <div class="tech-card"><i class="devicon-nodejs-plain colored"></i><p>Node.js</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section container">
+             <div class="section-title">
+                <h2>Contact Me</h2>
+                <p>Punya pertanyaan atau ingin berdiskusi? Kirimkan saya pesan.</p>
+            </div>
+            <div class="form-container">
+                <form action="https://formspree.io/f/your_form_id" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" class="input-field" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="input-field" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="input-field" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Eki Zulfar Rachman. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
