@@ -1,15 +1,32 @@
-const video = document.getElementById("mainVideo");
+document.addEventListener('DOMContentLoaded', () => {
+    // Fungsi untuk filter portofolio
+    const filterPortfolio = (category) => {
+        const items = document.querySelectorAll('.portfolio-item');
+        items.forEach(item => {
+            if (item.getAttribute('data-category') === category) {
+                item.classList.add('show');
+            } else {
+                item.classList.remove('show');
+            }
+        });
+    };
 
-// Klik video untuk play/pause
-video.addEventListener("click", () => {
-  if (video.paused) video.play();
-  else video.pause();
-});
+    // Tambahkan event listener ke tombol tab
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            // Hapus kelas 'active' dari semua tombol
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            // Tambahkan kelas 'active' ke tombol yang diklik
+            const currentButton = event.currentTarget;
+            currentButton.classList.add('active');
+            
+            // Dapatkan kategori dan panggil fungsi filter
+            const category = currentButton.getAttribute('onclick').match(/'([^']+)'/)[1];
+            filterPortfolio(category);
+        });
+    });
 
-// Tombol like
-document.querySelector(".like").addEventListener("click", e => {
-  const count = e.currentTarget.querySelector(".count");
-  let num = parseInt(count.textContent.replace(/\D/g,"")) || 0;
-  num++;
-  count.textContent = num;
+    // Inisialisasi filter untuk menampilkan 'projects' secara default
+    filterPortfolio('projects');
 });
