@@ -1,0 +1,96 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{
+  height:100%;
+  background:#000;
+  font-family:Arial, sans-serif;
+  color:#fff;
+  overflow:hidden;
+}
+.player-page{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Panel kanan */
+.right-panel{
+  position:absolute;
+  right:16px;
+  bottom:120px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+  z-index:10;
+}
+.profile{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+}
+.avatar{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  border:2px solid #fff;
+  object-fit:cover;
+}
+.follow-btn{
+  background:#ff2d55;
+  border:none;
+  padding:6px 12px;
+  border-radius:12px;
+  color:#fff;
+  cursor:pointer;
+  font-size:12px;
+}
+.actions{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.action{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:rgba(0,0,0,.5);
+  padding:10px;
+  border-radius:12px;
+  cursor:pointer;
+  min-width:60px;
+}
+.action span:first-child{
+  font-size:22px;
+}
+.action .count{
+  font-size:12px;
+  margin-top:6px;
+  color:#ddd;
+}
+
+/* Panel bawah */
+.bottom-panel{
+  position:absolute;
+  left:16px;
+  bottom:20px;
+  right:100px;
+  z-index:10;
+}
+.user{
+  font-weight:700;
+  margin-bottom:6px;
+}
+.caption{
+  font-size:14px;
+  margin-bottom:6px;
+}
+.music{
+  font-size:13px;
+  color:#ccc;
+}
